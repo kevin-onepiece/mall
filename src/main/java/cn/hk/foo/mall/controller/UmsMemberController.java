@@ -1,6 +1,6 @@
 package cn.hk.foo.mall.controller;
 
-import cn.hk.foo.mall.common.CommonResult;
+import cn.hk.foo.mall.common.api.CommonResult;
 import cn.hk.foo.mall.service.UmsMemberService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

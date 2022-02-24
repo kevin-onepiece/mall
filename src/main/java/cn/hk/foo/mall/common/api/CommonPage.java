@@ -1,4 +1,4 @@
-package cn.hk.foo.mall.common;
+package cn.hk.foo.mall.common.api;
 
 import com.github.pagehelper.PageInfo;
 import lombok.Data;

@@ -2,7 +2,7 @@ package cn.hk.foo.mall.service.impl;
 
 import cn.hk.foo.mall.mbg.mapper.PmsBrandMapper;
 import cn.hk.foo.mall.mbg.model.PmsBrand;
-import cn.hk.foo.mall.mbg.model.PmsBrandExample;
+import cn.hk.foo.mall.mbg.model.examples.PmsBrandExample;
 import cn.hk.foo.mall.service.PmsBrandService;
 import com.github.pagehelper.PageHelper;
 import lombok.RequiredArgsConstructor;
@@ -18,7 +18,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class PmsBrandServiceImpl implements PmsBrandService {
 
-    private PmsBrandMapper pmsBrandMapper;
+    private final PmsBrandMapper pmsBrandMapper;
 
     @Override
     public List<PmsBrand> listAllBrand() {

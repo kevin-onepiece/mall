@@ -1,7 +1,7 @@
 package cn.hk.foo.mall.controller;
 
-import cn.hk.foo.mall.common.CommonPage;
-import cn.hk.foo.mall.common.CommonResult;
+import cn.hk.foo.mall.common.api.CommonPage;
+import cn.hk.foo.mall.common.api.CommonResult;
 import cn.hk.foo.mall.mbg.model.PmsBrand;
 import cn.hk.foo.mall.service.PmsBrandService;
 import io.swagger.annotations.Api;

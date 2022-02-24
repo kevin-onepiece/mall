@@ -1,4 +1,4 @@
-package cn.hk.foo.mall.mbg.model;
+package cn.hk.foo.mall.mbg.model.examples;
 
 import java.util.ArrayList;
 import java.util.List;

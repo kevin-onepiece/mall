@@ -1,6 +1,6 @@
 package cn.hk.foo.mall.service;
 
-import cn.hk.foo.mall.common.CommonResult;
+import cn.hk.foo.mall.common.api.CommonResult;
 
 /**
  * 会员管理Service
