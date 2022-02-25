@@ -5,7 +5,6 @@ import cn.hk.foo.mall.service.RedisService;
 import cn.hk.foo.mall.service.UmsMemberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 

@@ -2,10 +2,10 @@ package cn.hk.foo.mall.mbg.mapper;
 
 import cn.hk.foo.mall.mbg.model.UmsAdmin;
 import cn.hk.foo.mall.mbg.model.examples.UmsAdminExample;
-import java.util.List;
-
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 @Mapper
 public interface UmsAdminMapper {

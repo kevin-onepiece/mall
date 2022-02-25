@@ -1,7 +1,6 @@
 package cn.hk.foo.mall.component;
 
 import cn.hk.foo.mall.common.utils.JwtTokenUtil;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

@@ -14,7 +14,8 @@
     <name>mall</name>
     <description>mall</description>
     <properties>
-        <java.version>11</java.version>
+        <java.version>8</java.version>
+        <swagger.fox.version>2.9.2</swagger.fox.version>
     </properties>
 
     <dependencies>
@@ -69,14 +70,19 @@
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
-            <version>2.7.0</version>
+            <version>${swagger.fox.version}</version>
         </dependency>
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger-ui</artifactId>
-            <version>2.7.0</version>
+            <version>${swagger.fox.version}</version>
         </dependency>
-
+        <!--springfox swagger官方Starter-->
+        <!--<dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-boot-starter</artifactId>
+            <version>3.0.0</version>
+        </dependency>-->
         <!--redis依赖配置-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -99,6 +105,12 @@
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt</artifactId>
             <version>0.9.1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-validator -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>6.2.2.Final</version>
         </dependency>
     </dependencies>
 

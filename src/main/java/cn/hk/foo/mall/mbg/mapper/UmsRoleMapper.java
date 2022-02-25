@@ -2,8 +2,9 @@ package cn.hk.foo.mall.mbg.mapper;
 
 import cn.hk.foo.mall.mbg.model.UmsRole;
 import cn.hk.foo.mall.mbg.model.examples.UmsRoleExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface UmsRoleMapper {
     int countByExample(UmsRoleExample example);

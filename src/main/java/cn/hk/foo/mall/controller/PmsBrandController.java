@@ -8,6 +8,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
@@ -28,6 +29,7 @@ public class PmsBrandController {
 
     private final PmsBrandService pmsBrandService;
 
+    @PreAuthorize("hasAuthority('pms:brand:read')")
     @ApiOperation("获取品牌列表")
     @RequestMapping(value = "listAll", method = RequestMethod.GET)
     @ResponseBody
@@ -35,6 +37,7 @@ public class PmsBrandController {
         return CommonResult.success(pmsBrandService.listAllBrand());
     }
 
+    @PreAuthorize("hasAuthority('pms:brand:create')")
     @ApiOperation("添加品牌")
     @RequestMapping(value = "/create", method = RequestMethod.POST)
     @ResponseBody
@@ -51,6 +54,7 @@ public class PmsBrandController {
         return commonResult;
     }
 
+    @PreAuthorize("hasAuthority('pms:brand:update')")
     @ApiOperation("更新品牌")
     @RequestMapping(value = "/update/{id}", method = RequestMethod.POST)
     @ResponseBody
@@ -67,6 +71,7 @@ public class PmsBrandController {
         return commonResult;
     }
 
+    @PreAuthorize("hasAuthority('pms:brand:delete')")
     @ApiOperation("删除品牌")
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
     @ResponseBody
@@ -81,6 +86,7 @@ public class PmsBrandController {
         }
     }
 
+    @PreAuthorize("hasAuthority('pms:brand:read')")
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     @ResponseBody
     public CommonResult<CommonPage<PmsBrand>> listBrand(@RequestParam(value = "pageNum", defaultValue = "1") Integer pageNum,
@@ -89,6 +95,7 @@ public class PmsBrandController {
         return CommonResult.success(CommonPage.restPage(brandList));
     }
 
+    @PreAuthorize("hasAuthority('pms:brand:read')")
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     @ResponseBody
     public CommonResult<PmsBrand> brand(@PathVariable("id") Long id) {

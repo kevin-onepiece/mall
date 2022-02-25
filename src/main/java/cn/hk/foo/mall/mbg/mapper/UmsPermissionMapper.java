@@ -2,8 +2,9 @@ package cn.hk.foo.mall.mbg.mapper;
 
 import cn.hk.foo.mall.mbg.model.UmsPermission;
 import cn.hk.foo.mall.mbg.model.examples.UmsPermissionExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface UmsPermissionMapper {
     int countByExample(UmsPermissionExample example);

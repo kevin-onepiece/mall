@@ -1,6 +1,5 @@
 package cn.hk.foo.mall.config;
 
-import org.apache.ibatis.annotations.Mapper;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Configuration;
 
@@ -10,6 +9,6 @@ import org.springframework.context.annotation.Configuration;
  * @description
  */
 @Configuration
-@MapperScan(basePackages = {"cn.hk.foo"}, annotationClass = Mapper.class)
+@MapperScan({"cn.hk.foo.mall.mbg.mapper", "cn.hk.foo.mall.dao"})
 public class MybatisConfig {
 }

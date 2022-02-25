@@ -7,7 +7,6 @@ import cn.hk.foo.mall.dto.AdminUserDetails;
 import cn.hk.foo.mall.mbg.model.UmsAdmin;
 import cn.hk.foo.mall.mbg.model.UmsPermission;
 import cn.hk.foo.mall.service.UmsAdminService;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -25,7 +24,6 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import java.util.HashMap;
 import java.util.List;
 
 
@@ -68,6 +66,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers(HttpMethod.GET, // 允许对于网站静态资源的无授权访问
                         "/",
+                        "/swagger-ui/",
                         "/*.html",
                         "/favicon.ico",
                         "/**/*.html",

@@ -7,9 +7,9 @@ import cn.hk.foo.mall.mbg.model.UmsAdmin;
 import cn.hk.foo.mall.mbg.model.UmsPermission;
 import cn.hk.foo.mall.mbg.model.examples.UmsAdminExample;
 import cn.hk.foo.mall.service.UmsAdminService;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -28,14 +28,19 @@ import java.util.List;
  * Created by macro on 2018/4/26.
  */
 @Service
-@RequiredArgsConstructor
+//@RequiredArgsConstructor
 @Slf4j
 public class UmsAdminServiceImpl implements UmsAdminService {
-    private final UserDetailsService userDetailsService;
-    private final JwtTokenUtil jwtTokenUtil;
-    private final PasswordEncoder passwordEncoder;
-    private final UmsAdminMapper adminMapper;
-    private final UmsAdminRoleRelationDao adminRoleRelationDao;
+    @Autowired
+    private UserDetailsService userDetailsService;
+    @Autowired
+    private JwtTokenUtil jwtTokenUtil;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+    @Autowired
+    private UmsAdminMapper adminMapper;
+    @Autowired
+    private UmsAdminRoleRelationDao adminRoleRelationDao;
     @Value("${jwt.tokenHead}")
     private String tokenHead;
 

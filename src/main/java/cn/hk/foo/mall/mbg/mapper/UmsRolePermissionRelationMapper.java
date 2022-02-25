@@ -2,8 +2,9 @@ package cn.hk.foo.mall.mbg.mapper;
 
 import cn.hk.foo.mall.mbg.model.UmsRolePermissionRelation;
 import cn.hk.foo.mall.mbg.model.examples.UmsRolePermissionRelationExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface UmsRolePermissionRelationMapper {
     int countByExample(UmsRolePermissionRelationExample example);
