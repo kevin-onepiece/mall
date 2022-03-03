@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * Created by macro on 2018/8/3.
  */
 @Controller
-@Api(tags = "UmsMemberController", value = "会员登录注册管理")
+@Api(tags = "会员登录注册管理")
 @RequestMapping("/sso")
 @RequiredArgsConstructor
 public class UmsMemberController {
